@@ -59,9 +59,9 @@ def check_messages(message):
 
     response("I\'am doing nothing. I am here to help you with your questions :)",["what","are","you","doing","up","to"],single_response=True)
 
-    response("I\'am a ChatBot made with Python Programming Language. Made By Sanay George Varghese",["who","are","you","made","creator"],single_response=True,required_word=["who"])
+    response("I\'am a ChatBot made with Python Programming Language. Made By Sanay George Varghese",["who","are","you","made","creator","language","code","which","make","build","created","programming"],single_response=True,required_word=["who"])
 
-    response("I\'am glad to hear that!",["i","am","doing","great","good","well","fine","happy","ok"],single_response=True,required_word=["doing","fine","am","i"])
+    response("I\'am glad to hear that!",["i","am","doing","great","good","well","fine","happy","ok","love","like","you"],single_response=True,required_word=["doing","fine","am","i"])
 
     response("Current date and time is "+ now.strftime("%I:%M %p %d/%m/%Y "), ["what","is","the","current","time","tell","me","which","this","date","month","year","weak"],single_response=True,required_word=["time","year","month","date","which","what","is","the","now"])
 
@@ -71,8 +71,8 @@ def check_messages(message):
     response("Bye! See u later :>",["bye","good","see","you","u","later","exit","quit","q","bie"],single_response=True,required_word=["bye","good","exit","q","quit"],)
 
     # Code for search in google and wikipedia
-    if ("who" in message or "what" in message or "about"  in message or "tell" in message or  "on"  in message or "which"  in message or "is" in message ):
-        socket.setdefaulttimeout(10)
+    if ("who" in message or "what" in message or "about"  in message or "tell" in message or "which"  in message ):
+        socket.setdefaulttimeout(5)
         try:
             googleSearchUrls = list(googlesearch.search(" ".join(message),num_results=1))
             for url in googleSearchUrls:
